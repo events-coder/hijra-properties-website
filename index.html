@@ -14,7 +14,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
     h1,h2,h3,.brand{font-family:Manrope,sans-serif}.brand-wordmark{display:inline-block;color:#fff;font-family:Manrope,sans-serif;font-weight:800;font-size:23px;line-height:.95;letter-spacing:.12em}.brand-wordmark small{display:block;color:#c5a66b;font-size:9px;letter-spacing:.32em;margin-top:7px}.footer-brand .brand-wordmark{font-size:21px}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
     .topbar{background:var(--green);color:#fff}.nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand img{display:block;width:148px;height:auto}.navlinks{display:flex;gap:30px;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#e5ece7}
+    .brand img{display:block;width:126px;max-height:56px;height:auto;object-fit:contain}.navlinks{display:flex;gap:30px;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#e5ece7}
     .navlinks a:hover{color:#e3c58d}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border:1px solid var(--gold);color:#fff;border-radius:2px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
     .nav-cta:hover,.btn:hover{background:var(--gold);color:#080808}.menu{display:none;background:none;border:1px solid #ffffff66;color:#fff;padding:9px 12px}
     .hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;background:#080808;overflow:hidden}
@@ -46,7 +46,7 @@
 <header class="topbar">
   <div class="wrap nav">
     <a class="brand" href="#home" aria-label="Hijra Properties home"><img src="Hijra%20Properties%20Logo.png" alt="Hijra Properties"></a>
-    <nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#cities">Explore</a><a href="#services">Services</a><a href="#partners">Partner</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
+    <nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#cities">Explore</a><a href="#services">Services</a><a href="#partners">Partner</a><a href="#franchise">Franchise with us</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
     <a class="nav-cta" href="#contact">Start a conversation</a>
     <button class="menu" id="menu" aria-label="Open navigation">Menu</button>
   </div>
@@ -68,8 +68,8 @@
   <section id="cities"><div class="wrap">
     <div class="section-head"><div><div class="smallcaps">Explore the Haramain</div><h2>Two blessed cities. Meaningful opportunities.</h2></div><p>Explore opportunities across Makkah and Madinah, each with its own character, community and property landscape.</p></div>
     <div class="city-grid">
-      <a class="city-card" href="#contact"><img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1100&q=85" alt="The Holy Mosque in Makkah"><div class="city-copy"><span>Explore the city</span><h3>Invest in Makkah</h3><span>Discover opportunities ↗</span></div></a>
-      <a class="city-card" href="#contact"><img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1100&q=85" alt="Architecture in Madinah"><div class="city-copy"><span>Explore the city</span><h3>Invest in Madinah</h3><span>Discover opportunities ↗</span></div></a>
+      <a class="city-card" href="invest-in-makkah.html"><img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1100&q=85" alt="The Holy Mosque in Makkah"><div class="city-copy"><span>Explore the city</span><h3>Invest in Makkah</h3><span>Discover opportunities ↗</span></div></a>
+      <a class="city-card" href="invest-in-madinah.html"><img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1100&q=85" alt="Architecture in Madinah"><div class="city-copy"><span>Explore the city</span><h3>Invest in Madinah</h3><span>Discover opportunities ↗</span></div></a>
     </div>
   </div></section>
   <section class="services" id="services"><div class="wrap">
@@ -91,6 +91,10 @@
     <div class="section-head"><div><div class="smallcaps">Partner with us</div><h2>Good partnerships begin with a conversation.</h2></div><p>We are interested in working with credible developers, landowners, investors and strategic partners who share a long-term outlook.</p></div>
     <div class="partner-cards"><article class="partner-card"><div class="smallcaps">01 / Developers</div><h3>Development expertise</h3><p>Bring your experience and project vision to opportunities in the Haramain.</p></article><article class="partner-card"><div class="smallcaps">02 / Investors</div><h3>Investment collaboration</h3><p>Explore project prospects and discuss how aligned capital and expertise can contribute.</p></article><article class="partner-card"><div class="smallcaps">03 / Landowners</div><h3>Land and projects</h3><p>Discuss potential land, joint-development and strategic collaboration opportunities.</p></article></div>
   </div></section>
+  <section class="partner" id="franchise"><div class="wrap">
+    <div class="section-head"><div><div class="smallcaps">Franchise with us</div><h2>Grow with Hijra Properties.</h2></div><p>Interested in representing the Hijra Properties brand in your market? We welcome enquiries from experienced property professionals and business partners.</p></div>
+    <div class="contact-box"><div><div class="smallcaps">Become a franchise partner</div><h2>Build local connections. Share meaningful opportunities.</h2><p>Tell us about your market, experience and plans. Our team will be pleased to discuss potential franchise and representation opportunities.</p></div><a class="btn" href="mailto:info@hijraproperties.com?subject=Franchise%20Enquiry">Enquire about franchising</a></div>
+  </div></section>
   <section class="faq" id="faq"><div class="wrap faq-grid">
     <div class="faq-intro"><div class="smallcaps">A few useful answers</div><h2>Questions before you take the next step?</h2><p>Every opportunity is different. Speak with us to understand the information available and what the next steps may involve.</p></div>
     <div class="qa">
@@ -105,7 +109,7 @@
 </main>
 <footer><div class="wrap">
   <div class="footer-top"><div class="footer-brand"><img src="Hijra%20Properties%20Logo.png" alt="Hijra Properties"><p>Connecting Muslims worldwide with property, development and investment opportunities in Makkah and Madinah.</p></div>
-    <div class="footer-links"><div><strong>Explore</strong><a href="#about">About</a><a href="#cities">Makkah & Madinah</a><a href="#services">Services</a></div><div><strong>Connect</strong><a href="#partners">Partner with us</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></div>
+    <div class="footer-links"><div><strong>Explore</strong><a href="#about">About</a><a href="#cities">Makkah & Madinah</a><a href="#services">Services</a></div><div><strong>Connect</strong><a href="#partners">Partner with us</a><a href="#franchise">Franchise with us</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></div>
   </div><div class="copyright"><span>© <span id="year"></span> Hijra Properties. All rights reserved.</span><span>Property and investment opportunities are subject to due diligence and applicable regulations.</span></div>
 </div></footer>
 <script>
