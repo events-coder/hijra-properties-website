@@ -17,9 +17,11 @@
     .brand img{display:block;width:148px;height:auto}.navlinks{display:flex;gap:30px;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#e5ece7}
     .navlinks a:hover{color:#e3c58d}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border:1px solid var(--gold);color:#fff;border-radius:2px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
     .nav-cta:hover,.btn:hover{background:var(--gold);color:#080808}.menu{display:none;background:none;border:1px solid #ffffff66;color:#fff;padding:9px 12px}
-    .hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.62) 52%,rgba(0,0,0,.22)),url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=2000&q=85") center 48%/cover}
-    .hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--green))}
-    .hero-inner{position:relative;z-index:1;padding:105px 0 140px;max-width:760px}.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#dfc38d;font-weight:700}
+    .hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;background:#080808;overflow:hidden}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58) 52%,rgba(0,0,0,.24))}
+    .hero:after{content:"";position:absolute;z-index:2;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--green))}
+    .hero-inner{position:relative;z-index:3;padding:105px 0 140px;max-width:760px}.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#dfc38d;font-weight:700}
     h1{font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-.045em;margin:22px 0}.hero p{font-size:18px;line-height:1.8;color:#e6ebe6;max-width:590px;margin:0 0 32px}
     .btn{background:var(--gold);color:#080808;border-color:var(--gold);font-weight:700}.btn.outline{background:transparent;color:#fff;margin-left:10px}.btn.outline:hover{background:#fff;color:var(--green)}
     .intro{background:var(--green);color:#fff;padding:5px 0 95px}.intro-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
@@ -43,7 +45,7 @@
 <body>
 <header class="topbar">
   <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="Hijra Properties home"><img src="hijra-logo-white.png" alt="Hijra Properties"></a>
+    <a class="brand" href="#home" aria-label="Hijra Properties home"><img src="Hijra%20Properties%20Logo.png" alt="Hijra Properties"></a>
     <nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#cities">Explore</a><a href="#services">Services</a><a href="#partners">Partner</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
     <a class="nav-cta" href="#contact">Start a conversation</a>
     <button class="menu" id="menu" aria-label="Open navigation">Menu</button>
@@ -51,6 +53,7 @@
 </header>
 <main id="home">
   <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="hijra%20properties.mp4" type="video/mp4"></video>
     <div class="wrap hero-inner">
       <div class="eyebrow">A connection to the blessed cities</div>
       <h1>Invest in the blessed cities of Makkah and Madinah.</h1>
@@ -101,12 +104,12 @@
   <section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div><div class="smallcaps">Get in touch</div><h2>Let’s explore what’s possible.</h2><p>Tell us whether you are interested in property, investment, development or a strategic partnership in Makkah or Madinah.</p></div><a class="btn" href="mailto:info@hijraproperties.com?subject=Hijra%20Properties%20Enquiry">Contact Hijra Properties</a></div></div></section>
 </main>
 <footer><div class="wrap">
-  <div class="footer-top"><div class="footer-brand"><img src="hijra-logo-white.png" alt="Hijra Properties"><p>Connecting Muslims worldwide with property, development and investment opportunities in Makkah and Madinah.</p></div>
+  <div class="footer-top"><div class="footer-brand"><img src="Hijra%20Properties%20Logo.png" alt="Hijra Properties"><p>Connecting Muslims worldwide with property, development and investment opportunities in Makkah and Madinah.</p></div>
     <div class="footer-links"><div><strong>Explore</strong><a href="#about">About</a><a href="#cities">Makkah & Madinah</a><a href="#services">Services</a></div><div><strong>Connect</strong><a href="#partners">Partner with us</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></div>
   </div><div class="copyright"><span>© <span id="year"></span> Hijra Properties. All rights reserved.</span><span>Property and investment opportunities are subject to due diligence and applicable regulations.</span></div>
 </div></footer>
 <script>
-  document.querySelectorAll('img[src="hijra-logo-white.png"]').forEach(img=>{img.addEventListener('error',()=>{const fallback=document.createElement('span');fallback.className='brand-wordmark';fallback.innerHTML='HIJRA <small>PROPERTIES</small>';img.replaceWith(fallback);},{once:true});});
+  document.querySelectorAll('img[src="Hijra%20Properties%20Logo.png"]').forEach(img=>{img.addEventListener('error',()=>{const fallback=document.createElement('span');fallback.className='brand-wordmark';fallback.innerHTML='HIJRA <small>PROPERTIES</small>';img.replaceWith(fallback);},{once:true});});
   const menu=document.getElementById('menu'), links=document.getElementById('navlinks');
   menu.addEventListener('click',()=>links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
